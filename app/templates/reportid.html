@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <body>
+        <meta charset="UTF-8">
+        <title></title>
+        <table>
+            <caption>Payroll - Report Id: {{ report_id }}</caption>
+            <tr>
+                <th>Date</th>
+                <th>Hours Worked</th>
+                <th>Employee Id</th>
+                <th>Job Group</th>
+            </tr>
+            {% for row in range(n_rows) %}
+                <tr>
+                    {% for col in range(n_cols) %}
+                    <td> {{ payroll_data[row][col] }} </td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+</head>
+</html>
